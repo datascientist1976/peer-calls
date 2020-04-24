@@ -79,8 +79,8 @@ class PeerHandler {
         'peer: %s, track mute (id: %s, stream.id: %s)',
         userId, track.id, stream.id)
       dispatch(StreamActions.removeTrack({
+        mid,
         userId,
-        stream,
         track,
       }))
     }
@@ -89,8 +89,8 @@ class PeerHandler {
         'peer: %s, track unmute (id: %s, stream.id: %s)',
         userId, track.id, stream.id)
       dispatch(StreamActions.addTrack({
+        mid,
         userId,
-        stream,
         track,
       }))
     }
